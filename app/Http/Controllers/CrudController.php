@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
-use App\Cruds;
+use App\Models\Cruds;
 
 class CrudController extends Controller
 {
