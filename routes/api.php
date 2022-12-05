@@ -23,4 +23,19 @@ return $request->user();
 Route::get('/message', function () {
     return 'hello php';
 });
-Route::get('/employees', [CrudController::class, 'getEmployees']);
+
+//get api with or without perams
+
+Route::get('employees/{id?}', [CrudController::class, 'getEmployees']);
+
+// post api
+
+Route::post('employees', [CrudController::class, 'addEmployees']);
+
+//put api
+
+Route::put('employees/{id}', [CrudController::class, 'updateEmployees']);
+
+// delete api
+
+Route::delete('employees/{id}', [CrudController::class, 'deleteEmployees']);
