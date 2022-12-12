@@ -54,6 +54,5 @@ class CrudController extends Controller
         } else {
             return ["result" => "data delete faild", "status" => 500];
         }
-
     }
 }

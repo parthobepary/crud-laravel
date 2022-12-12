@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CarControler;
 use App\Http\Controllers\CrudController;
 use Illuminate\Support\Facades\Route;
 
@@ -39,3 +40,5 @@ Route::put('employees/{id}', [CrudController::class, 'updateEmployees']);
 // delete api
 
 Route::delete('employees/{id}', [CrudController::class, 'deleteEmployees']);
+
+Route::match(['get', 'post', 'put', 'delete'], '/user/{id?}', [CarControler::class, 'test']);
